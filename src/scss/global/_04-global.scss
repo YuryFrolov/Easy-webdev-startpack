@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 100%;
 }
 
 *,
@@ -14,8 +14,6 @@ body {
 	height: 100%;
 	position: relative;
 }
-
-body {}
 
 ul,
 ol,
@@ -38,6 +36,71 @@ input:focus {
 button {
 	@include no-btn;
 }
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+///DEBUG
+BODY > * > * {
+    outline: 2px solid deeppink;
+}
+
+BODY > * > * > * {
+    outline: 2px dashed lime;
+    outline-offset: -2px;
+}
+
+BODY > * > * > * > * {
+    outline: 2px dotted dodgerblue;
+    outline-offset: -4px;
+}
+
+BODY > * > * > * > * > * {
+    outline: 2px dotted rgb(30, 255, 68);
+    outline-offset: -4px;
+}
+
+BODY > * > * > * > * > * > * {
+    outline: 2px solid deeppink;
+}
+
+BODY > * > * > * > * > * > * > * {
+    outline: 2px solid rgb(3, 238, 255);
+    outline-offset: -2px;
+}
+
+BODY {
+  opacity: .7;
+}
+
+HTML {
+    background: url('../img/') 50% 0 no-repeat;
+}
+
+@media (min-width: 768px) {
+	HTML {
+		background-image: url('../img/');
+	}
+}
+
+@media (min-width: 1200px) {
+    HTML {
+      background-image: url('../img/');
+    }
+}
+
+@media (min-width: 1920px) {
+    HTML {
+      background-image: url('../img/');
+    }
+} 
+///
 
 .flex {
 	display: flex;
